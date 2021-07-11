@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user" class="com.qiuwuyu.spring5.bean.User"></bean>
+
+    <bean id="book" class="com.qiuwuyu.spring5.bean.User$Book">
+        <property name="b_name" value="屈小小的书"></property>
+    </bean>
+
+    <bean id="order" class="com.qiuwuyu.spring5.bean.User$Order">
+        <constructor-arg name="orderId" value="789456145aq"></constructor-arg>
+        <constructor-arg name="customer" value="quxiaoxiao"></constructor-arg>
+    </bean>
+
+    <bean id="book2" class="com.qiuwuyu.spring5.bean.User$Book" p:b_name="乾坤大挪移"></bean>
+
+    <bean id="person" class="com.qiuwuyu.spring5.bean.Person">
+        <property name="address">
+            <null></null>
+        </property>
+    </bean>
+
+    <bean id="person2" class="com.qiuwuyu.spring5.bean.Person">
+        <property name="address">
+            <value><![CDATA[
+            !<<南京>>
+            ]]></value>
+        </property>
+    </bean>
+</beans>
